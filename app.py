@@ -15,7 +15,7 @@ def redirect():
     return jsonify({'error': 'Missing original_url parameter'}), 400
 
   redirected_url = get_redirect_url(original_url)
-  return jsonify({'redirected_url': redirected_url})
+  return jsonify(redirected_url)
 
 def get_redirect_url(url):
   try:
